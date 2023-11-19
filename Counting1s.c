@@ -5,7 +5,7 @@
 
 // counting one's using one thread length 1000
 int *array;
-int length = 100000;
+int length = 1000000000;
 int count;
 
 void *countOnes(void *arg)
@@ -23,6 +23,7 @@ void *countOnes(void *arg)
     *(int *)arg = count;
     pthread_exit(arg);
 }
+
 int main()
 {
     array = (int *)malloc(length * sizeof(int));
